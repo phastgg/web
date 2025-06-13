@@ -32,7 +32,7 @@ export default function SocialComponent(props: ComponentProps) {
         <>
             <Link href={props.social.link}>
                 <div
-                    className={`py-6 px-8 flex items-center justify-center rounded-lg border-charcoal border-2 bg-neutral-950 transition-all duration-500 ${props.social.className}`}
+                    className={`py-6 px-8 flex items-center justify-center rounded-lg border-charcoal border-2 bg-neutral-950 shadow-sm hover:shadow-[#8412FF] hover:-translate-y-2 transition-all duration-500 ${props.social.className}`}
                     key={props.key}
                     aria-label={props.social.ariaLabel}
                 >
