@@ -12,6 +12,7 @@ interface SliderProps {
     rightButtonClassName?: string;
     leftButtonClassName?: string;
     className?: string;
+    main?: { className?: string };
     slides: Slide[];
 }
 
@@ -75,7 +76,9 @@ export default function Slider(props: SliderProps) {
                     className={`${props.className}`}
                     layout
                 >
-                    {slides[currentIndex].children}
+                    <div className={props.main?.className}>
+                        {slides[currentIndex].children}
+                    </div>
                 </motion.div>
             </AnimatePresence>
 
