@@ -24,7 +24,7 @@ export default function Footer() {
                                 Building purposeful, public-facing tools and experiences.
                             </p>
                         </div>
-                        <div className="flex flex-col justify-center items-center px-12 gap-2">
+                        <div className="flex flex-col justify-start items-center px-12 gap-2">
                             <div className="flex flex-row gap-2 text-lg font-bold font-poppins text-white mb-2">
                                 <IconLocation size={28}/>
                                 <h3>Explore</h3>
@@ -40,7 +40,7 @@ export default function Footer() {
                                 ))}
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center items-center px-12 gap-2">
+                        <div className="flex flex-col justify-start items-center px-12 gap-2">
                             <div className="flex flex-row gap-2 text-lg font-bold font-poppins text-white mb-2">
                                 <IconPhone size={28}/>
                                 <h3>Contact</h3>
@@ -57,10 +57,11 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row justify-center items-center gap-16 p-8 pb-0 text-base text-zinc-400 w-full">
+                <div
+                    className="flex flex-row justify-center items-center gap-16 p-8 pb-0 text-base text-zinc-400 w-full">
                     <div className="flex flex-row justify-center items-center gap-1">
                         <p>Crafted with</p>
-                        <IconHeart size={20} color={"#e11d48"} />
+                        <IconHeart size={20} color={"#e11d48"}/>
                         <p>by Phast team</p>
                     </div>
                     <div className="flex flex-row items-center gap-1">
@@ -69,6 +70,6 @@ export default function Footer() {
                 </div>
             </div>
         </footer>
-);
+    );
 }
 
