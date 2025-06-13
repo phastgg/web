@@ -17,11 +17,11 @@ export default function Menu() {
     return (
         <div className="fixed w-full z-[100]">
             <div
-                className={"backdrop-brightness-[30%] w-full p-6 px-16 flex flex-row justify-between items-center max-sm:justify-center max-sm:flex-col gap-y-4"}>
+                className={"backdrop-brightness-[30%] w-full p-6 px-16 flex flex-row justify-between items-center max-md:justify-center max-md:flex-col gap-y-4"}>
                 <Link href={"/"}>
                     <Image width={120} height={120} src={logo} alt="logo"/>
                 </Link>
-                <div className="flex flex-row items-center gap-16 max-sm:hidden">
+                <div className="flex flex-row items-center gap-16 max-md:hidden">
                     <div className="flex flex-row items-center justify-end gap-16">
                         {pages.map((page) => (
                             <div key={page.url}
@@ -43,7 +43,7 @@ export default function Menu() {
                     </div>
                 </div>
                 <div
-                    className={"hidden cursor-pointer transition-all duration-500 max-sm:flex flex-col items-center "
+                    className={"hidden cursor-pointer transition-all duration-500 max-md:flex flex-col items-center "
                         + (hamburger ? "text-blue-300" : "text-white")}
                     onClick={() => setHamburger(!hamburger)}
                 >
