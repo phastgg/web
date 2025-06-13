@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Geist, Geist_Mono, Inter, Poppins} from "next/font/google";
+import {Geist, Geist_Mono, Inter, Lexend_Deca, Poppins} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,7 +20,13 @@ const poppins = Poppins({
 
 const inter = Inter({
     variable: "--font-inter",
-    weight: ["100", "200", "300", "400", "500", "600"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+    subsets: ["latin"]
+})
+
+const lexendDeca = Lexend_Deca({
+    variable: "--font-lexend-deca",
+    weight: ["100", "200", "300", "400", "500", "600", "800", "900"],
     subsets: ["latin"]
 })
 
@@ -37,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={"scroll-smooth"}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${inter.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${inter.variable} ${lexendDeca.variable} antialiased`}
       >
           <div className={"bg-gradient-to-b from-[#06000A] to-[#610fba80]"}>
               {children}
