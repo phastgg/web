@@ -25,7 +25,7 @@ export default function Menu() {
                     <div className="flex flex-row items-center justify-end gap-16">
                         {pages.map((page) => (
                             <div key={page.url}
-                                 className="hover:text-[#A9C6DE] transition-all duration-300 font-poppins text-[0.95rem] font-medium"
+                                 className="hover:text-violet-400 transition-all duration-300 font-poppins text-base font-medium"
                             >
                                 <a href={page.url}>
                                     <p>{page.name}</p>
@@ -35,10 +35,10 @@ export default function Menu() {
                     </div>
                     <div className="flex flex-row items-center gap-8">
                         <Link aria-label={"Repository"} href={"https://github.com/phastgg/web"} target={"_blank"} >
-                            <IconBrandGithub size={28} className="hover:text-[#2C3EFF] transition-all duration-300" />
+                            <IconBrandGithub size={28} className="hover:text-violet-400 transition-all duration-300" />
                         </Link>
                         <Link aria-label={"Discord"} href={"https://discord.phast.gg/"} target={"_blank"} >
-                            <IconBrandDiscord size={28} className="hover:text-[#2C3EFF] transition-all duration-300" />
+                            <IconBrandDiscord size={28} className="hover:text-violet-400 transition-all duration-300" />
                         </Link>
                     </div>
                 </div>

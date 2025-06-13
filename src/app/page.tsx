@@ -1,3 +1,5 @@
+"use client";
+
 import Menu from "@/components/menu";
 import {
     IconContract
@@ -9,10 +11,13 @@ import {aboutUsHighlights, projects, reviews, socials} from "@/variables/global"
 import ReviewComponent from "@/components/review";
 import SocialComponent from "@/components/contacts";
 import Footer from "@/components/footer";
+import {useRef} from "react";
 
 export default function Home() {
+    const contactRefObject = useRef<HTMLElement | null>(null);
+
     return (
-        <div className="overflow-x-hidden">
+        <div>
             <Menu/>
             <div className="container mx-auto p-16 pt-20 max-[425px]:px-4 max-[32rem]:overflow-scroll-y">
                 <section id="main" className="p-32 pt-48 font-inter text-center flex flex-col items-center w-full max-sm:p-16">
@@ -26,8 +31,9 @@ export default function Home() {
                         A passionate team delivering top-tier quality — in public projects and commissions alike.
                     </p>
                     <div className="pt-40 pb-44 text-center font-poppins font-medium text-xl">
-                        <ButtonScroll tagId={"about"}
-                                      className={"p-4 border-2 rounded-lg border-[#ECE6FF] cursor-pointer transition-all " +
+                        <ButtonScroll
+                            scrollToElement={contactRefObject}
+                            className={"p-4 border-2 rounded-lg border-[#ECE6FF] cursor-pointer transition-all " +
                                           "duration-400 hover:bg-[#ECE6FF] hover:text-[#06000A] flex flex-row gap-3 items-center justify-center " +
                                           "max-sm:w-64"}
                         >
@@ -79,7 +85,7 @@ export default function Home() {
                         <ReviewComponent reviews={reviews} />
                     </div>
                 </section>
-                <section id="contact" className="p-8 text-center flex flex-col gap-4">
+                <section id="contact" className="p-8 text-center flex flex-col gap-4" ref={contactRefObject}>
                     <h1 className="font-inter text-4xl font-bold">Contact</h1>
                     <div className="w-4/6 mx-auto mt-4">
                         <p className="font-poppins text-[1.1rem]">

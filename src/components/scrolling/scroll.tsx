@@ -1,28 +1,21 @@
-"use client";
-
-import {ReactNode, useEffect} from "react";
+import {ReactNode, RefObject, useEffect} from "react";
 
 interface ButtonScrollProps {
-    tagId: string;
+    scrollToElement: RefObject<HTMLElement | null>;
     children: ReactNode;
     className: string | null;
 }
 
 export function ButtonScroll(props: ButtonScrollProps) {
-    let htmlElement: HTMLElement | null = null
-
-    useEffect(() => {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        htmlElement = document.getElementById(props.tagId)
-    }, []);
+    const refElement = props.scrollToElement;
 
     const handleScroll = () => {
-        if (htmlElement == null) {
+        if (refElement.current == null) {
             console.log("null")
             return
         }
 
-        htmlElement.scrollIntoView({behavior: "smooth", block: "center"});
+        refElement.current.scrollIntoView({behavior: "smooth", block: "center"});
     };
 
     return (

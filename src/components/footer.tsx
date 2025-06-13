@@ -13,29 +13,34 @@ export default function Footer() {
     return (
         <footer>
             <hr className={"bg-gradient-to-r from-[#8412FF] to-[#06000A] h-1 w-full border-none"}/>
-            <div className="w-full bg-neutral-950 backdrop-opacity-50 py-6">
+            <div className="w-full bg-neutral-950 py-6">
                 <div className="py-8 px-16">
                     <div className="grid grid-cols-3">
                         <div className="flex flex-col justify-center items-start px-12">
-                            <Image src={"/logo.png"} alt={"logo"} width={200} height={150}/>
+                            <Link href={"/"}>
+                                <Image src={"/logo.png"} alt={"logo"} width={200} height={150} />
+                            </Link>
                             <p className="mt-2 text-sm text-neutral-400">
                                 Building purposeful, public-facing tools and experiences.
                             </p>
                         </div>
-                        <div className="flex flex-col justify-center items-center px-12">
+                        <div className="flex flex-col justify-center items-center px-12 gap-2">
                             <div className="flex flex-row gap-2 text-lg font-bold font-poppins text-white mb-2">
                                 <IconLocation size={28}/>
                                 <h3>Explore</h3>
                             </div>
-                            <div className="grid grid-cols-2 gap-x-12 text-sm text-neutral-200">
+                            <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm text-neutral-200">
                                 {exploreMap.map((item, index) => (
                                     <Link href={item.url}
-                                          className={"w-min hover:text-fuchsia-400 transition-all duration-300"}
-                                          key={index}>{item.name}</Link>
+                                          className={"w-min hover:text-violet-400 transition-all duration-300"}
+                                          key={index}
+                                    >
+                                        {item.name}
+                                    </Link>
                                 ))}
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center items-center px-12">
+                        <div className="flex flex-col justify-center items-center px-12 gap-2">
                             <div className="flex flex-row gap-2 text-lg font-bold font-poppins text-white mb-2">
                                 <IconPhone size={28}/>
                                 <h3>Contact</h3>
@@ -44,7 +49,7 @@ export default function Footer() {
                                 <p>Have a project in mind or just want to say hi?</p>
                                 <a
                                     href="mailto:phast@phast.gg"
-                                    className="text-sm text-white hover:text-fuchsia-400 transition-all duration-300"
+                                    className="text-sm text-white hover:text-violet-400 transition-all duration-300"
                                 >
                                     phast@phast.gg
                                 </a>
@@ -58,7 +63,7 @@ export default function Footer() {
                         <IconHeart size={20} color={"#e11d48"} />
                         <p>by Phast team</p>
                     </div>
-                    <div className="flex flex-row items-center gap-1 w-f">
+                    <div className="flex flex-row items-center gap-1">
                         <p>&copy; {new Date().getFullYear()} Phast. All rights reserved.</p>
                     </div>
                 </div>
