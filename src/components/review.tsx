@@ -20,7 +20,8 @@ export default function ReviewComponent(props: ComponentProps) {
             <Slider
                 slides={slides}
                 key={props.key}
-                className="bg-neutral-950 p-8 border-2 border-zinc-700 rounded-md w-2/4 max-lg:w-full"
+                className={"bg-neutral-950 p-8 border-2 border-zinc-700 rounded-md w-2/4 max-lg:w-full hover:border-violet-600 " +
+                    "shadow-sm hover:shadow-[#8412FF] transition-shadow transition-colors duration-500"}
                 rightButtonClassName="cursor-pointer"
                 leftButtonClassName="cursor-pointer"
             />
