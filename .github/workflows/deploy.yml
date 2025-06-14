@@ -23,5 +23,6 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           script: |
+            echo $DEPLOY_DIRECTORY
             cd $DEPLOY_DIRECTORY
             git pull origin master
