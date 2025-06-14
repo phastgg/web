@@ -16,13 +16,12 @@ jobs:
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.0
-        env: 
-          DEPLOY_DIRECTORY: ${{ vars.DEPLOY_DIRECTORY }}
         with:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           script: |
+            DEPLOY_DIRECTORY="${{ vars.DEPLOY_DIRECTORY }}"
             echo "Deploying to: $DEPLOY_DIRECTORY"
             cd $DEPLOY_DIRECTORY
             git pull origin master
