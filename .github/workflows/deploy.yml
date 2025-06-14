@@ -7,21 +7,42 @@ on:
 
 jobs:
   deploy:
-    environment: production
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js app
+        run: npm run build
+
       - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v0.1.4
         with:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           script: |
             DEPLOY_DIRECTORY="${{ vars.DEPLOY_DIRECTORY }}"
-            echo "Deploying to: $DEPLOY_DIRECTORY"
-            cd $DEPLOY_DIRECTORY
-            git pull origin master
+            mkdir -p $DEPLOY_DIRECTORY
+            rm -rf $DEPLOY_DIRECTORY/*
+
+          source-directory: .
+          target-directory: $DEPLOY_DIRECTORY
+          script-stop-on-error: true
+
+      - name: Transfer Built Files
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          source: "."
+          target: ${{ vars.DEPLOY_DIRECTORY }}
