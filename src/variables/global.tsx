@@ -1,6 +1,5 @@
 import {Project, ProjectGithubIcon} from "@/components/project";
 import {
-    IconBrandDiscord, IconBrandGithub,
     IconContract,
     IconGhostOff,
     IconHeartBolt,
