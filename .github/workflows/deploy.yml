@@ -24,4 +24,4 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           script: |
             cd $DEPLOY_DIRECTORY
-            git pull
+            git pull origin master
