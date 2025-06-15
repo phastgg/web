@@ -54,5 +54,5 @@ jobs:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
-          source: ${{ github.workspace }}/out
+          source: ~/out
           target: ${{ vars.DEPLOY_DIRECTORY }}
