@@ -19,7 +19,7 @@ export default function Menu() {
             <div
                 className={"backdrop-brightness-[30%] w-full p-6 px-16 flex flex-row justify-between items-center max-md:justify-center max-md:flex-col gap-y-4"}>
                 <Link href={"/"}>
-                    <Image width={120} height={120} src={logo} alt="logo"/>
+                    <Image width={120} height={120} src={logo} alt="logo" unoptimized={true}/>
                 </Link>
                 <div className="flex flex-row items-center gap-16 max-md:hidden">
                     <div className="flex flex-row items-center justify-end gap-16">

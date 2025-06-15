@@ -18,7 +18,7 @@ export default function Footer() {
                     <div className="grid grid-cols-3">
                         <div className="flex flex-col justify-center items-start px-12">
                             <Link href={"/"}>
-                                <Image src={"/logo.png"} alt={"logo"} width={200} height={150} />
+                                <Image src={"/logo.png"} alt={"logo"} width={200} height={150} unoptimized={true} />
                             </Link>
                             <p className="mt-2 text-sm text-neutral-400">
                                 Building purposeful, public-facing tools and experiences.
