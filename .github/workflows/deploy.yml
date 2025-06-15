@@ -56,3 +56,4 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           source: "out/"
           target: ${{ vars.DEPLOY_DIRECTORY }}
+          strip_components: 1
