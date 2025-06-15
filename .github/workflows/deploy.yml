@@ -46,8 +46,6 @@ jobs:
             mkdir -p $DEPLOY_DIRECTORY
             rm -rf $DEPLOY_DIRECTORY/*
 
-          source-directory: ${{ github.workspace }}/out
-          target-directory: $DEPLOY_DIRECTORY
           script-stop-on-error: true
 
       - name: Transfer Built Files
@@ -56,5 +54,5 @@ jobs:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
-          source: "."
+          source: ${{ github.workspace }}/out
           target: ${{ vars.DEPLOY_DIRECTORY }}
