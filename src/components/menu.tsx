@@ -51,7 +51,7 @@ export default function Menu() {
 
                     <div
                         className={"text-white flex flex-col items-center gap-1 mt-4 transition-all duration-500 "
-                            + (hamburger ? "h-20" : "h-0")}
+                            + (hamburger ? "h-28" : "h-0")}
                     >
                         {pages.map((page, index) => (
                             <div key={index}
@@ -63,6 +63,16 @@ export default function Menu() {
                                 </a>
                             </div>
                         ))}
+
+
+                        <div className={"flex flex-row items-center gap-4 pt-2 " + (hamburger ? "text-white" : "text-transparent")}>
+                            <Link aria-label={"Repository"} href={"https://github.com/phastgg/web"} target={"_blank"}>
+                                <IconBrandGithub size={28} className="hover:text-violet-400 transition-all duration-300"/>
+                            </Link>
+                            <Link aria-label={"Discord"} href={"https://discord.phast.gg/"} target={"_blank"}>
+                                <IconBrandDiscord size={28} className="hover:text-violet-400 transition-all duration-300"/>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

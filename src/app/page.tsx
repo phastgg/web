@@ -17,7 +17,7 @@ export default function Home() {
     const contactRefObject = useRef<HTMLElement | null>(null);
 
     return (
-        <div>
+        <div className="max-[400px]:overflow-x-hidden">
             <Menu/>
             <div className="container mx-auto p-16 pt-20 max-[425px]:px-4 max-[32rem]:overflow-scroll-y">
                 <section id="main" className="p-32 pt-48 font-inter text-center flex flex-col items-center w-full max-sm:p-16">
