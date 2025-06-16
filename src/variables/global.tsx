@@ -78,6 +78,6 @@ export const reviews: Review[] = [
 
 export const socials: Social[] = [
     DiscordSocial({ link: "https://discord.phast.gg/" }),
-    GithubSocial({ link: "https://github.com/phastgg/docs" }),
+    GithubSocial({ link: "https://github.com/phastgg/" }),
     MailSocial({ link: "mailto:phast@phast.gg" })
 ];
