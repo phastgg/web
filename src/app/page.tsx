@@ -24,20 +24,20 @@ export default function Home() {
         setIsLoaded(true);
     }, []);
 
-      useEffect(() => {
-    const lenis = new Lenis();
+    useEffect(() => {
+        const lenis = new Lenis();
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+        function raf(time: number) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
 
-    requestAnimationFrame(raf);
+        requestAnimationFrame(raf);
 
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+        return () => {
+            lenis.destroy();
+        };
+    }, []);
 
     return (
         <div className="max-[400px]:overflow-x-hidden">
