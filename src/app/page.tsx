@@ -71,7 +71,7 @@ export default function Home() {
                     <div className="w-4/6 mx-auto mt-4 group">
                         <p className="font-poppins text-[1.1rem] transition-colors duration-300 group-hover:text-zinc-100">We are a passionate team dedicated to
                             turning ideas into impactful digital experiences. With a
-                            blend of creativity and technical expertise, we craft websites and appss that truly resonate
+                            blend of creativity and technical expertise, we craft websites and apps that truly resonate
                             with your vision.
                         </p>
                     </div>
