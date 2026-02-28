@@ -11,12 +11,11 @@ export interface AboutUsHighlight {
 
 interface ComponentProps {
     highlight: AboutUsHighlight;
-    key?: number;
+    id?: number;
 }
 
 export default function AboutComponent(props: ComponentProps) {
-    const highlight = props.highlight;
-    const key = props.key;
+    const { highlight, id } = props;
     const ref = useRef<HTMLDivElement>(null);
     const hasAnimated = useRef(false);
 
@@ -46,7 +45,7 @@ export default function AboutComponent(props: ComponentProps) {
     }, []);
 
     return (
-        <div key={key}
+        <div key={id}
              ref={ref}
              style={{opacity: 0}}
              className="w-full xl:w-1/4 bg-neutral-950 border-2 border-zinc-700 rounded-md py-8 xl:p-4 xl:py-4 hover:border-violet-600 shadow-sm hover:shadow-[#8412FF] hover:-translate-y-2 transition-all duration-500 group">

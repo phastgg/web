@@ -30,13 +30,13 @@ interface ProjectSocialLink {
 
 interface ComponentProps {
     project: Project;
-    key: number;
+    id: number;
 }
 
 const descriptionCharacterLimit = 162;
 export default function ProjectComponent(props: ComponentProps) {
     const project = props.project;
-    const key = props.key;
+    const key = props.id;
     const ref = useRef<HTMLDivElement>(null);
     const hasAnimated = useRef(false);
 

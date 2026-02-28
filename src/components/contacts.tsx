@@ -25,7 +25,7 @@ export interface Social {
 }
 
 interface ComponentProps {
-    key?: number;
+    id?: number;
     social: Social;
 }
 
@@ -65,7 +65,7 @@ export default function SocialComponent(props: ComponentProps) {
                     ref={ref}
                     style={{opacity: 0}}
                     className={`py-6 px-8 flex items-center justify-center rounded-lg border-charcoal border-2 bg-neutral-950 shadow-sm hover:shadow-[#8412FF] hover:-translate-y-2 transition-all duration-500 group hover:scale-110 ${props.social.className}`}
-                    key={props.key}
+                    key={props.id}
                     aria-label={props.social.ariaLabel}
                 >
                     <props.social.icon size={32} className="transition-transform duration-300 group-hover:scale-125" />

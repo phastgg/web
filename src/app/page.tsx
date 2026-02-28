@@ -76,8 +76,8 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="py-8 flex flex-col xl:flex-row gap-8">
-                        {aboutUsHighlights.map((highlight, i) => (
-                            <AboutComponent highlight={highlight} key={i} />
+                        {aboutUsHighlights.map((highlight, index) => (
+                            <AboutComponent highlight={highlight} id={index} key={"dummy" + index} />
                         ))}
                     </div>
                 </section>
@@ -93,7 +93,7 @@ export default function Home() {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-3 auto-rows-fr gap-4 py-8">
                         {projects.map((project, index) => (
-                            <ProjectComponent project={project} key={index} />
+                            <ProjectComponent project={project} id={index} key={"dummy" + index} />
                         ))}
                     </div>
                 </section>
@@ -118,7 +118,7 @@ export default function Home() {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-3 auto-rows-fr gap-4 py-8 px-64 max-xl:px-32 max-lg:px-16 max-md:px-4">
                         {socials.map((social, index) => (
-                            <SocialComponent key={index} social={social} />
+                            <SocialComponent id={index} social={social} key={"dummy" + index} />
                         ))}
                     </div>
                 </section>
