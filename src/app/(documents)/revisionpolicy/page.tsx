@@ -25,7 +25,7 @@ const Headline = (props: { size: number, children: ReactNode }) => {
     return <h1 className="text-4xl font-bold mt-20 mb-4 text-secondary font-inter">{children}</h1>
   }
   else if (size === 2) {
-    return <h2 className="text-2xl font-semibold mt-12 mb-4 text-secondary font-inter">{children}</h2>
+    return <h2 className="text-2xl font-semibold mt-8 mb-4 text-secondary font-inter">{children}</h2>
   }
 }
 
@@ -52,7 +52,7 @@ export default function Page() {
   return (
     <div className="max-[400px]:overflow-x-hidden">
       <AnimatedSpace/>
-      <div className="container mx-auto p-16 pt-20 max-[425px]:px-4 max-[32rem]:overflow-scroll-y leading-relaxed">
+      <div className="container mx-auto p-16 pt-20 max-[425px]:px-4 max-[32rem]:overflow-scroll-y leading-8">
         <Headline size={1}>Revision Policy - Phast</Headline>
         <Text>
           This document defines the revision terms for all commissions handled by <PhastLink className="text-blue-300" />. 
@@ -69,7 +69,6 @@ export default function Page() {
           <li><Text>Does not change the agreed scope or core functionality</Text></li>
           <li><Text>Does not introduce new features or major structural changes</Text></li>
         </ul>
-        <br />
 
         <Text>
           The following are <strong>not</strong> considered revisions:
@@ -83,7 +82,6 @@ export default function Page() {
         <Text>
           Such changes are treated as scope extensions and will be quoted separately.
         </Text>
-        <br />
 
         <Headline size={2}>2. Number of Included Revisions</Headline>
         <Text>
@@ -100,7 +98,6 @@ export default function Page() {
         <Text>
           Any additional revision rounds will be billed separately based on the required workload.
         </Text>
-        <br />
 
         <Headline size={2}>3. Submission of Feedback</Headline>
         <Text>
@@ -114,7 +111,6 @@ export default function Page() {
         <Text>
           Fragmented feedback submitted in multiple messages may be treated as multiple revision rounds.
         </Text>
-        <br />
 
         <Headline size={2}>4. Timeframe for Revisions</Headline>
         <ul className="list-disc ml-6 italic">
@@ -122,7 +118,6 @@ export default function Page() {
           <li><Text>If no feedback is received within this period, the project will be considered approved.</Text></li>
           <li><Text>The turnaround time for revisions depends on their scope and complexity.</Text></li>
         </ul>
-        <br />
 
         <Headline size={2}>5. Scope Protection</Headline>
         <Text>
@@ -136,7 +131,6 @@ export default function Page() {
         <Text>
           The goal is to maintain realistic project boundaries and protect delivery integrity. Quality remains a priority but must stay aligned with the agreed scope and capacity.
         </Text>
-        <br />
 
         <Headline size={2}>6. Client Recommendations</Headline>
         <ul className="list-disc ml-6 italic">
@@ -144,13 +138,11 @@ export default function Page() {
           <li><Text>Communicate expectations early.</Text></li>
           <li><Text>Collect internal feedback before submitting revision requests.</Text></li>
         </ul>
-        <br />
 
         <Headline size={2}>7. Final Agreement</Headline>
         <Text>
           By initiating a commission with <PhastLink className="text-blue-300" />, the client acknowledges and agrees to the terms outlined in this Revision Policy.
         </Text>
-        <br />
       </div>
       <Footer />
     </div>
