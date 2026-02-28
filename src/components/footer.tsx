@@ -75,7 +75,7 @@ export default function Footer() {
                                     <IconPhone size={28} className="transition-transform duration-300 group-hover:scale-110"/>
                                     <h3>Contact</h3>
                                 </div>
-                                <div className="flex flex-col gap-1 text-sm text-neutral-200 px-9 max-[500px]:text-center">
+                                <div className="flex flex-col gap-1 text-sm text-neutral-200 px-9 max-[500px]:text-center group">
                                     <p className="transition-colors duration-300 group-hover:text-neutral-100">Have a project in mind or just want to say hi?</p>
                                     <a
                                         href="mailto:phast@phast.gg"
