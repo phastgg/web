@@ -20,7 +20,7 @@ export default function Menu() {
     }, []);
 
     return (
-        <div className="fixed w-full z-[100]" style={{animation: isLoaded ? 'slideInDown 0.6s ease-out forwards' : 'none'}}>
+        <div className="fixed w-full z-[100] backdrop-blur-md" style={{animation: isLoaded ? 'slideInDown 0.6s ease-out forwards' : 'none'}}>
             <div
                 className={"backdrop-brightness-[30%] w-full p-6 px-16 flex flex-row justify-between items-center max-md:justify-center max-md:flex-col gap-y-4 transition-all duration-300"}
                 style={{backdropFilter: 'blur(10px)'}}>
