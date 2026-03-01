@@ -6,12 +6,15 @@ import {IconHeart, IconLocation, IconPhone} from "@tabler/icons-react";
 import { useEffect, useRef } from "react";
 
 export default function Footer() {
-    const exploreMap = [
-        { name: "About", url: "/#about" },
-        { name: "Projects", url: "/#projects" },
-        { name: "Reviews", url: "/#reviews" },
-        { name: "Contact", url: "/#contact" },
-    ]
+    const ExploreLink = (props: { link: string, content: string, index?: number }) => {
+        return <Link href={props.link}
+                className={"w-min hover:text-violet-400 transition-all duration-300 relative group"}
+                key={props.index}
+        >
+            {props.content}
+            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#8412FF] to-[#a78bfa] group-hover:w-full transition-all duration-300"></div>
+        </Link>
+    }
 
     const ref = useRef<HTMLElement>(null);
     const hasAnimated = useRef(false);
@@ -57,16 +60,23 @@ export default function Footer() {
                                 <IconLocation size={28} className="transition-transform duration-300 group-hover:scale-110"/>
                                 <h3>Explore</h3>
                             </div>
-                            <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm text-neutral-200">
-                                {exploreMap.map((item, index) => (
-                                    <Link href={item.url}
-                                            className={"w-min hover:text-violet-400 transition-all duration-300 relative group"}
-                                            key={index}
-                                    >
-                                        {item.name}
-                                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#8412FF] to-[#a78bfa] group-hover:w-full transition-all duration-300"></div>
-                                    </Link>
-                                ))}
+                            <div className="flex gap-x-12 gap-y-2 text-sm text-neutral-200 justify-center">
+                                <div className="flex flex-col gap-2">
+                                    <h4 className="font-semibold font-poppins">Main Page</h4>
+                                    <div className="grid grid-cols-2 gap-x-12 gap-y-2">
+                                        <ExploreLink content="About" link="/#about" />
+                                        <ExploreLink content="Projects" link="/#projects" />
+                                        <ExploreLink content="Reviews" link="/#reviews" />
+                                        <ExploreLink content="Contact" link="/#contact" />
+                                    </div>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <h4 className="font-semibold font-poppins">Policies</h4>
+                                    <div className="flex flex-col gap-2">
+                                        <ExploreLink content="Commissions" link="/commission-policy" />
+                                        <ExploreLink content="Revisions" link="/revision-policy" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="flex flex-col justify-start items-center gap-2">
