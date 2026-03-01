@@ -17,7 +17,7 @@ export const aboutUsHighlights: AboutUsHighlight[] = [
     {
         icon: IconContract,
         title: "Revision Policy",
-        description: "Not fully satisfied? No worries — you can request up to two free revisions to ensure it meets your needs"
+        description: "Not fully satisfied? No worries — you can request up to three free revisions to ensure it meets your needs"
     },
     {
         icon: IconHeartBolt,
