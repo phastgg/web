@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import {Geist, Geist_Mono, Inter, Lexend_Deca, Poppins} from "next/font/google";
 import "./globals.css";
+import AnimatedSpace from "@/components/background/animated-space";
+import Menu from "@/components/menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +47,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${inter.variable} ${lexendDeca.variable} antialiased`}
       >
-          <div className={"bg-gradient-to-b from-[#06000A] to-[#610fba80]"}>
+          <Menu/>
+          <AnimatedSpace />
+          <div className={"bg-gradient-to-b from-[#06000A] via-[#1a0033] to-[#0d0015] relative z-10"}>
               {children}
           </div>
       </body>
