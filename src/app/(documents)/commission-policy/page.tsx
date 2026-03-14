@@ -142,15 +142,31 @@ return (
 
         <Headline size={2}>4. Source Code and Ownership</Headline>
         <Text>
-          Unless otherwise agreed, the client receives usage rights to the delivered product. Full source code ownership is not included by default.
+          Unless otherwise explicitly agreed in writing, all intellectual property rights and ownership of the delivered software remain with <PhastLink className="text-blue-300" />.
         </Text>
-        <ul className="list-disc ml-6 italic">
-          <li><Text>Full source code access via GitHub requires an additional €10 fee.</Text></li>
-          <li><Text>For Bukkit-based Minecraft plugins, source access is included due to licensing structure.</Text></li>
-        </ul>
+        <br />
+
         <Text>
-          All intellectual property rights remain with <PhastLink className="text-blue-300" /> until full payment is completed.
+          Upon full payment, the client receives a <strong>non-exclusive, perpetual license</strong> to use, operate, and distribute the delivered product.
+          This includes the right to run the software on servers, integrate it into their own services, and distribute the compiled product if desired.
         </Text>
+        <br />
+
+        <Text>
+          Access to the full source code is <strong>not included by default</strong>.
+          Source code access can be provided via GitHub for an additional <strong>€10 fee</strong>.
+        </Text>
+
+        <ul className="list-disc ml-6 italic">
+          <li><Text>The €10 fee grants access to the project source code repository.</Text></li>
+          <li><Text>This fee provides access to the code but does not transfer copyright ownership.</Text></li>
+          <li><Text>For Bukkit-based Minecraft plugins, source access is included due to licensing requirements.</Text></li>
+        </ul>
+
+        <Text>
+          Ownership or full copyright transfer may only occur through a separate written agreement.
+        </Text>
+        <br />
 
         <Headline size={2}>5. Deadlines and Delivery</Headline>
         <Text>
